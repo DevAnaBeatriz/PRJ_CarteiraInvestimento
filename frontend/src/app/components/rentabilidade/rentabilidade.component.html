@@ -1,0 +1,24 @@
+<div *ngIf="rentabilidade.detalhes">
+  <table>
+    <thead>
+    <tr>
+      <th>Ativo</th>
+      <th>Valor Investido (R$)</th>
+      <th>Preço Inicial (R$)</th>
+      <th>Preço Final (R$)</th>
+      <th>Rentabilidade (%)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let ativo of rentabilidade.detalhes | keyvalue">
+      <td>{{ ativo.key }}</td>
+      <td>{{ ativo.value['Valor Investido (R$)'] }}</td>
+      <td>{{ ativo.value['Preço Inicial (R$)'] }}</td>
+      <td>{{ ativo.value['Preço Final (R$)'] }}</td>
+      <td [style.color]="ativo.value['Rentabilidade (%)'] >= 0 ? 'green' : 'red'">
+        {{ ativo.value['Rentabilidade (%)'] | number:'1.2-2' }}%
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

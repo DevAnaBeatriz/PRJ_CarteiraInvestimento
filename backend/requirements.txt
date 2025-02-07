@@ -3,4 +3,6 @@ yfinance
 pandas-datareader
 jupyter
 matplotlib
-
+ipykernel
+flask
+jsonify
