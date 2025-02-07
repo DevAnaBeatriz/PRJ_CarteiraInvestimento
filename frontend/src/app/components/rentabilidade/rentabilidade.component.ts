@@ -12,9 +12,9 @@ interface Ativo {
 @Component({
   selector: 'app-rentabilidade',
   templateUrl: './rentabilidade.component.html',
-  standalone: true, // ✅ Definindo como standalone
+  standalone: true, 
   imports: [
-    CommonModule,  // ✅ Adicionando CommonModule para resolver *ngIf e *ngFor
+    CommonModule, 
     KeyValuePipe,
     DecimalPipe,
     NgClass
